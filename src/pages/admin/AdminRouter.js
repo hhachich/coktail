@@ -16,7 +16,7 @@ const AdminRouter = () => {
             <Route path="dashboard" element={<DashBoard/>}/> 
             <Route path='user'>
                 <Route path="index" element={<User/>}/> 
-                <Route path="edit" element={<UserEdit/>}/> 
+                <Route path="edit/:uid" element={<UserEdit/>}/> 
                 <Route path="add" element={<UserAdd/>}/> 
             </Route>
             <Route path='cocktail'>
