@@ -10,7 +10,7 @@ const Header = () => {
         //            </ul>
         //      </nav>
         // </header>
-        <div>
+        <div className='AHeader'>
            Header DashBoard  
         </div>
         
