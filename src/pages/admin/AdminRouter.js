@@ -13,6 +13,7 @@ const AdminRouter = () => {
     return (
         <Routes>
           <Route element={<ALayout/>}> 
+          <Route index element={<DashBoard/>} />
             <Route path="dashboard" element={<DashBoard/>}/> 
             <Route path='user'>
                 <Route path="index" element={<User/>}/> 
