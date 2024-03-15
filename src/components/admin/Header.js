@@ -1,17 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
+import { accountService } from '../../services/account.service';
 
 const Header = () => {
+    let navigate = useNavigate()
+
+    const logout = () => {
+        accountService.logout()
+        navigate('/')
+    }
     return (
-        // <header>
-        //      <nav>
-        //           <ul>
-        //             <li><Link to="/dashBoard">Dash Board</Link></li>
-        //            </ul>
-        //      </nav>
-        // </header>
+    
         <div className='AHeader'>
            Header DashBoard  
+           <button onClick={logout}>Logout</button>
         </div>
         
     );
