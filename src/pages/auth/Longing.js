@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { accountService } from '../../services/account.service';
 import './auth.css';
 import { useNavigate } from 'react-router-dom';
 const Longing = () => {
@@ -29,6 +29,8 @@ const Longing = () => {
             .then(
                 res=>{
                     console.log(res)
+                    //accountService.saveToken(res.data.access_token)
+                    accountService.saveToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MTg3NDkzOSwiZXhwIjoxNjUxOTYxMzM5fQ.JGN1p8YIfR-M-5eQ-Ypy6Ima5cKA4VbfL2xMr2MgHm4")   
                     navigate('/admin')
                 }
             )
