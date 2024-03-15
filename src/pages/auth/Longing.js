@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { accountService } from '../../services/account.service';
 import './auth.css';
 import { useNavigate } from 'react-router-dom';
@@ -24,8 +23,8 @@ const Longing = () => {
 
     const onSubmit=(e)=>{
         e.preventDefault()
-        console.log(credentials)
-         axios.post('http://flp-api.francecentral.cloudapp.azure.com/api-docs/auth/login',credentials)
+        
+        accountService.login(credentials)
             .then(
                 res=>{
                     console.log(res)
