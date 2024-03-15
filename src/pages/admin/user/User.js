@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { userService } from '../../../services/user.service';
 
 const User = () => {
     
     let navigate=useNavigate();
     
     useEffect(() => {
-        console.log('useEffect')
+        userService.getAllUsers()
+            .then(res=>console.log(res.data))
+            .catch(err=>console.log(err))
         
     }, [])
 
